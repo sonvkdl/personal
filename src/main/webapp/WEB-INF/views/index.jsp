@@ -333,7 +333,7 @@ function test() {
 						<dt><a href="javascript:;">개인 프로젝트</a></dt>
 						<dd class="frist"><a href="javascript:;" onclick="clickMenu('portfolio1', '게시글', '/board/list.do', false)">게시글</a></dd>
 						<dd><a href="javascript:;" onclick="clickMenu('portfolio2', 'to-do', '/todo/todolist.do', false)">to-do 리스트</a></dd>
-						<dd><a href="javascript:;" onclick="clickMenu('portfolio3', '방명록', '/guest/guestbook.do', false)">방명록(준비중)</a></dd>
+						<dd><a href="javascript:;" onclick="clickMenu('portfolio3', '방명록', '/guest/guestbook.do', false)">방명록</a></dd>
 					</dl>
 				</div>
 			</div>
@@ -367,7 +367,7 @@ function test() {
 						<ul>	
 							<li id="portfolio1_submenu" onclick="clickMenu('portfolio1', '게시글', '/board/list.do', false)">게시글</li>
 							<li id="portfolio2_submenu" onclick="clickMenu('portfolio2', 'to-do', '/todo/todolist.do', false)">to-do 리스트</li>
-							<li id="portfolio3_submenu" onclick="clickMenu('portfolio3', '방명록', '/guest/guestbook.do', false)">방명록(준비중)</li>
+							<li id="portfolio3_submenu" onclick="clickMenu('portfolio3', '방명록', '/guest/guestbook.do', false)">방명록</li>
 						</ul>
 					</dd>
 				</dl>
