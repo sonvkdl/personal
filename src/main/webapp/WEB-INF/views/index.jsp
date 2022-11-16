@@ -327,6 +327,7 @@ function test() {
 						<dd class="frist"><a href="javascript:;" onclick="clickMenu('project1', '프로젝트 소개', '/main/index.do', false)">프로젝트 소개</a></dd>
 						<dd><a href="javascript:;" onclick="clickMenu('project2', '프로젝트 기획', '/main/index.do', false)">프로젝트 기획</a></dd>
 						<dd><a href="javascript:;" onclick="clickMenu('project3', '프로젝트 설계', '/main/index.do', false)">프로젝트 설계</a></dd>
+						<dd><a href="http://3.39.57.179:8080/pet/main.do">프로젝트 보러가기</a></dd>
 					</dl>
 					<dl style="width:15.666%;">
 						<dt><a href="javascript:;">개인 프로젝트</a></dt>
@@ -358,6 +359,7 @@ function test() {
 							<li id="project1_submenu" onclick="clickMenu('project1', '프로젝트 소개', '/main/index.do', false)">프로젝트 소개</li>
 							<li id="project2_submenu" onclick="clickMenu('project2', '프로젝트 기획', '/main/index.do', false)">프로젝트 기획</li>
 							<li id="project3_submenu" onclick="clickMenu('project3', '프로젝트 설계', '/main/index.do', false)">프로젝트 설계</li>
+							<li id="project4_submenu" onclick="location.href='http://3.39.57.179:8080/pet/main.do'">프로젝트 보러가기</li>
 						</ul>
 					</dd>
 					<dt id="portfolio" class="gnb_menu">개인 프로젝트</dt>
