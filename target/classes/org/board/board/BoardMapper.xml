@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.board.board.BoardMapper">
+	
+	<insert id="insert" parameterType="org.board.board.BoardVO">
+		INSERT INTO board (
+			title, content, regdate, member_no, isprivate
+		) VALUES (
+			#{title}, #{content}, now(), #{member_no}, #{isprivate}
+		) 
+	</insert>
+	
+	<select id="list" parameterType="org.board.board.BoardVO" resultType="org.board.board.BoardVO">
+		SELECT *,
+			(SELECT name FROM member WHERE member.member_no = board.member_no) AS name
+		FROM board
+		WHERE isdelete IS NULL
+		ORDER BY board_no DESC
+		LIMIT #{startIdx}, ${pageRow}
+	</select>
+	
+	<select id="listCount" parameterType="org.board.board.BoardVO" resultType="int">
+		SELECT COUNT(*) FROM board
+		WHERE isdelete IS NULL
+	</select>
+	
+	<select id="view" parameterType="int" resultType="org.board.board.BoardVO">
+		SELECT * FROM board
+		WHERE board_no = #{board_no}
+	</select>
+	
+	<update id="update" parameterType="org.board.board.BoardVO">
+		UPDATE board 
+		SET
+			title = #{title},
+			content = #{content},
+			isprivate = #{isprivate}
+		WHERE board_no = #{board_no}
+	</update>
+	
+	<update id="del" parameterType="org.board.board.BoardVO">
+		UPDATE board
+		SET
+			isdelete = now()
+		WHERE board_no = #{board_no}
+	</update>
+	
+</mapper>

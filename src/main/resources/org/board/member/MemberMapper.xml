@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.board.member.MemberMapper">
+	
+	<insert id="insert" parameterType="org.board.member.MemberVO">
+		INSERT INTO member (
+			name, id, email, pass, birthday, regdate
+		) VALUES (
+			#{name}, #{id}, #{email}, md5(#{pass}), #{birthday}, now()
+		) 
+	</insert>
+	
+	<select id="idDupCheck" parameterType="org.board.member.MemberVO" resultType="int">
+		SELECT COUNT(*) FROM member WHERE id = #{id}
+	</select>
+	
+	<select id="emailDupCheck" parameterType="org.board.member.MemberVO" resultType="int">
+		SELECT COUNT(*) FROM member WHERE email = #{email}
+	</select>
+	
+	<select id="login" parameterType="org.board.member.MemberVO" resultType="org.board.member.MemberVO">
+		SELECT * FROM member WHERE id = #{id} AND pass = md5(#{pass})
+	</select>
+	
+</mapper>
