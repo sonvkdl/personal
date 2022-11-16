@@ -16,6 +16,7 @@
 <script type="text/javascript" src="<%=util.Property.contextPath%>/js/member/member_s.js"></script>
 <script type="text/javascript" src="<%=util.Property.contextPath%>/js/board/board_s.js"></script>
 <script type="text/javascript" src="<%=util.Property.contextPath%>/js/todo/todo_s.js"></script>
+<script type="text/javascript" src="<%=util.Property.contextPath%>/js/guest/guest_s.js"></script>
 <script type="text/javascript" src="<%=util.Property.contextPath%>/js/function_jquery.js"></script>
 <script type="text/javascript" src="<%=util.Property.contextPath%>/js/function.js"></script>
 <script type="text/javascript" src="<%=util.Property.contextPath%>/js/calendar_beans_v2.0.js"></script>

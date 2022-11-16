@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.board.guest.GuestMapper">
+	
+	<insert id="insert" parameterType="org.board.guest.GuestVO">
+		INSERT INTO guest (
+			content, regdate, member_no, type
+		) VALUES (
+			#{content}, now(), #{member_no}, #{type}
+		) 
+	</insert>
+	
+	<select id="gb_list" parameterType="org.board.guest.GuestVO" resultType="org.board.guest.GuestVO">
+		SELECT *,
+			(SELECT name FROM member WHERE member.member_no = guest.member_no) AS name
+		FROM guest
+		WHERE isdelete IS NULL
+		AND type = 'guestbook'
+		ORDER BY guest_no DESC
+		LIMIT #{startIdx}, ${pageRow}
+	</select>
+	
+	<select id="gb_listCount" parameterType="org.board.guest.GuestVO" resultType="int">
+		SELECT COUNT(*) FROM guest
+		WHERE isdelete IS NULL
+		AND type = 'guestbook'
+	</select>
+	
+</mapper>

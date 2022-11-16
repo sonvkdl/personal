@@ -76,7 +76,7 @@
 	</div>
 </c:if>
 
-<!-- 페이지처리 -->
+<!-- 검색 
 <div class="bbsSearch">
     <form method="get" name="searchForm" id="searchForm" action="">
         <span class="srchSelect">
@@ -93,3 +93,4 @@
     </form>
     
 </div>
+-->
