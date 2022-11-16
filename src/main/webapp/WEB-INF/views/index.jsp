@@ -373,6 +373,9 @@ function test() {
 				</dl>
 			</div>
 			<div class="menuclose" onclick="menuToggle();"><img src="<%=util.Property.contextPath%>/img/menu_close.png" /></div>
+			<div class="copy">
+				 Portfolio. 
+			</div>
 		</div>
 		<!--//menuWrap-->
 		<div id="contentsWrap">
