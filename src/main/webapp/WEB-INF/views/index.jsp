@@ -373,9 +373,6 @@ function test() {
 				</dl>
 			</div>
 			<div class="menuclose" onclick="menuToggle();"><img src="<%=util.Property.contextPath%>/img/menu_close.png" /></div>
-			<div class="copy">Copyright (C) 2020<br />
-				서민구 Portfolio. 
-			</div>
 		</div>
 		<!--//menuWrap-->
 		<div id="contentsWrap">
