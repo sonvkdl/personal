@@ -323,10 +323,8 @@ function test() {
 						<dd><a href="javascript:;" onclick="clickMenu('myinfo2', '자기소개', '/myinfo/myinfo.do', false)">자기소개</a></dd>
 					</dl>
 					<dl style="width:13.666%;">
-						<dt><a href="javascript:;">팀프로젝트(정리중)</a></dt>
-						<dd class="frist"><a href="javascript:;" onclick="clickMenu('project1', '프로젝트 소개', '/main/index.do', false)">프로젝트 소개</a></dd>
-						<dd><a href="javascript:;" onclick="clickMenu('project2', '프로젝트 기획', '/main/index.do', false)">프로젝트 기획</a></dd>
-						<dd><a href="javascript:;" onclick="clickMenu('project3', '프로젝트 설계', '/main/index.do', false)">프로젝트 설계</a></dd>
+						<dt><a href="javascript:;">팀프로젝트</a></dt>
+						<dd><a href="javascript:;" onclick="clickMenu('project3', '프로젝트 기능', '/team.pdf', false)">프로젝트 기능</a></dd>
 						<dd><a href="http://3.39.57.179:8080/pet/main.do">프로젝트 보러가기</a></dd>
 					</dl>
 					<dl style="width:15.666%;">
@@ -353,12 +351,12 @@ function test() {
 							<li id="myinfo2_submenu" onclick="clickMenu('myinfo2', '자기소개', '/myinfo/myinfo.do', false)">자기소개</li>
 						</ul>
 					</dd>
-					<dt id="project" class="gnb_menu">팀프로젝트(정리중)</dt>
+					<dt id="project" class="gnb_menu">팀프로젝트<br/>
+					~반려견커뮤니티~</dt>
 					<dd class="gnb_submenu">
-						<ul>	
-							<li id="project1_submenu" onclick="clickMenu('project1', '프로젝트 소개', '/main/index.do', false)">프로젝트 소개</li>
-							<li id="project2_submenu" onclick="clickMenu('project2', '프로젝트 기획', '/main/index.do', false)">프로젝트 기획</li>
-							<li id="project3_submenu" onclick="clickMenu('project3', '프로젝트 설계', '/main/index.do', false)">프로젝트 설계</li>
+						<p style="color:black; margin-bottom: 10px;">반려견과 다른 반려동물을 키우는 사람, 키우지 않는 사람들이 정보(병원, 여행지 등)를 얻고 소통하는 커뮤니티</p>	
+						<ul>
+							<li id="project3_submenu" onclick="clickMenu('project3', '프로젝트 기능', '/team.pdf', false)">프로젝트 기능</li>
 							<li id="project4_submenu" onclick="location.href='http://3.39.57.179:8080/pet/main.do'">프로젝트 보러가기</li>
 						</ul>
 					</dd>
