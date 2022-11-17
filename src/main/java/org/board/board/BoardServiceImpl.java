@@ -47,4 +47,9 @@ public class BoardServiceImpl implements BoardService{
 	public int del(BoardVO vo) {
 		return mapper.del(vo);
 	}
+
+	@Override
+	public int viewcount(BoardVO vo) {
+		return mapper.viewcount(vo);
+	}
 }

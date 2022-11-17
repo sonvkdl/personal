@@ -45,6 +45,7 @@ public class BoardController {
 	
 	@GetMapping("/board/view.do")
 	public String view(BoardVO vo, Model model) {
+		service.viewcount(vo);
 		BoardVO data = service.view(vo.getBoard_no());
 		model.addAttribute("data", data);
 		return "board/view";

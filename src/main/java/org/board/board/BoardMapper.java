@@ -23,4 +23,7 @@ public interface BoardMapper {
 	
 	// 글 삭제하기
 	int del(BoardVO vo);
+	
+	// 조회수
+	int viewcount(BoardVO vo);
 }

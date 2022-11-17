@@ -45,4 +45,11 @@
 		WHERE board_no = #{board_no}
 	</update>
 	
+	<update id='viewcount' parameterType="org.board.board.BoardVO">
+		UPDATE board
+		SET
+			viewcount = viewcount + 1
+		WHERE board_no = #{board_no}	
+	</update>
+	
 </mapper>
