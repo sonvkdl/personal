@@ -34,4 +34,14 @@ public class GuestServiceImpl implements GuestService{
 		return mapper.gb_listCount(vo);
 	}
 
+	@Override
+	public int gb_modify(GuestVO vo) {
+		return mapper.gb_modify(vo);
+	}
+
+	@Override
+	public int gb_del(GuestVO vo) {
+		return mapper.gb_del(vo);
+	}
+
 }

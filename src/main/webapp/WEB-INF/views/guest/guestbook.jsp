@@ -21,21 +21,21 @@
 	                <caption>게시판 목록</caption>
 	                <colgroup>
 	                    <col width="80px" />
-	                    <col width="*" />
 	                    <col width="100px" />
+	                    <col width="*" />
 	                    <col width="150px" />
 	                </colgroup>
 	                <thead>
 	                    <tr>
 	                        <th>번호</th>
-	                        <th>내용</th>
 	                        <th>작성자</th>
+	                        <th>내용</th>
 	                        <th>작성일</th>
 	                    </tr>
 	                </thead>
 	                <tbody>
 	                <tr>
-                        <td class="first" colspan="8">*아직 수정/삭제 기능은 없습니다 참고해주세요*</td>
+                        <td class="first" colspan="8">*아직 수정 기능은 없습니다 참고해주세요*</td>
                     </tr>
 					<c:if test="${empty data.list }">
 	                    <tr>
@@ -46,15 +46,34 @@
 	                	<c:forEach items="${data.list }" var="list" varStatus="st">
 	                	<tr>
 	                        <td>${pageMaker.totalCount - (boardVO.page - 1)*boardVO.pageRow -st.index}</td>
-	                        <td class="txt_l" >
-	                            ${ list.content }
+                        	<c:if test="${list.member_no == loginInfo.member_no }">
+	                        <td class="writer" style="font-weight: bold; color:black;">
+	                         [나] ${list.name }
 	                        </td>
+                        	<td class="txt_l" style="font-weight: bold; color:black;">
+	                        ${ list.content }
+	                        <span style="font-size: 12px">&emsp;&emsp;
+	                        	<!-- 
+	                        	<a style="color:#708ebd;">[수정]</a>
+	                        	  -->
+	                        	<a style="color:#C06074;" href="gbdel.do?guest_no=${list.guest_no }">[삭제]</a>
+	                        </span>
+	                        </td>
+	                        <td class="date" style="font-weight: bold; color:black;">
+	                        	<fmt:formatDate value="${list.regdate }" pattern="yyyy-MM-dd"/>
+	                        </td>
+                        	</c:if>
+                        	<c:if test="${list.member_no != loginInfo.member_no }">
 	                        <td class="writer">
 	                            ${list.name }
+	                        </td>
+	                        <td class="txt_l" >
+	                            ${ list.content }
 	                        </td>
 	                        <td class="date">
 	                        	<fmt:formatDate value="${list.regdate }" pattern="yyyy-MM-dd"/>
 	                        </td>
+	                        </c:if>
 	                    </tr>
 	                	</c:forEach>
 	                </c:if>

@@ -38,4 +38,30 @@ public class GuestController {
 		
 	}
 	
+	@RequestMapping("/guest/gbmodify.do")
+	public String gbmodify(GuestVO vo, Model model) {
+		if(service.gb_modify(vo)>0) {
+			model.addAttribute("msg","수정 완료!");
+			model.addAttribute("url","guestbook.do");
+			
+			return "common/alert";
+		} else {
+			model.addAttribute("msg","수정 실패ㅠㅠ");
+			return "common/alert";
+		}
+	}
+	
+	@RequestMapping("/guest/gbdel.do")
+	public String gbdel(GuestVO vo, Model model) {
+		if(service.gb_del(vo)>0) {
+			model.addAttribute("msg","삭제 완료!");
+			model.addAttribute("url","guestbook.do");
+			
+			return "common/alert";
+		} else {
+			model.addAttribute("msg","삭제 실패ㅠㅠ");
+			return "common/alert";
+		}
+	}
+	
 }

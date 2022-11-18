@@ -13,3 +13,4 @@ function goGbSave(){
 	
 	$("#gbook").submit();
 }
+

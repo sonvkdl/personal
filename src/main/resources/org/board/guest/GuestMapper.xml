@@ -26,4 +26,18 @@
 		AND type = 'guestbook'
 	</select>
 	
+	<update id="gb_modify" parameterType="org.board.guest.GuestVO">
+		UPDATE guest
+		SET
+			content = #{content}
+		WHERE guest_no = #{guest_no}
+	</update>
+	
+	<update id="gb_del" parameterType="org.board.guest.GuestVO">
+		UPDATE guest
+		SET
+			isdelete = now()
+		WHERE guest_no = #{guest_no}
+	</update>
+	
 </mapper>

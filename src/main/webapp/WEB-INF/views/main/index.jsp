@@ -30,7 +30,14 @@
 					<div class="box notice">
 						<h2>방명록</h2>
 						<ul>
+							<c:forEach items="${gdata.list }" var="vo">
+							<li>
+							<a href="javascript:;" onclick="parent.clickMenu('portfolio3', '방명록', '/guest/guestbook.do', false);"> ${vo.content } <span>${vo.name }</span></a>
+							</li>
+							</c:forEach>
+							<c:if test="${empty gdata.list }">
 							<li style="text-align:center;">등록된 방명록이 없습니다.</li>
+							</c:if>
 						</ul>
 					</div>
 					<div class="linkBox">
