@@ -22,4 +22,12 @@
 		SELECT * FROM member WHERE id = #{id} AND pass = md5(#{pass})
 	</select>
 	
+	<update id ="selfout" parameterType="org.board.member.MemberVO">
+		UPDATE member
+		SET
+			leavedate = now(),
+			out = 1
+		WHERE member_no = #{member_no}
+	</update>	
+	
 </mapper>

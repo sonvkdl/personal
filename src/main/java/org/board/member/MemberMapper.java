@@ -15,4 +15,7 @@ public interface MemberMapper {
 	// 로그인
 	MemberVO login(MemberVO vo);
 	
+	// 탈퇴 out 1: 탈퇴, 2: 강퇴
+	int selfout(MemberVO vo);
+	
 }

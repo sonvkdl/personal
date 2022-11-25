@@ -36,5 +36,10 @@ public class MemberServiceImpl implements MemberService{
 		}
 		return temp;
 	}
+
+	@Override
+	public int selfout(MemberVO vo) {
+		return mapper.selfout(vo);
+	}
 	
 }

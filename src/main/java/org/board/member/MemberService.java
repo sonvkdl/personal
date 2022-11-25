@@ -10,4 +10,6 @@ public interface MemberService {
 	int emailDupCheck(String email);
 
 	boolean login(MemberVO vo, HttpSession sess);
+	
+	int selfout(MemberVO vo);
 }
