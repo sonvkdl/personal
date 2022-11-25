@@ -320,7 +320,7 @@ function test() {
 					<dl style="width:13.666%;">
 						<dt><a href="javascript:;">나의 정보</a></dt>
 						<dd class="frist"><a href="javascript:;" onclick="clickMenu('myinfo1', '프로필', '/myinfo/index.do', false)">프로필</a></dd>
-						<dd><a href="javascript:;" onclick="clickMenu('myinfo2', '자기소개', '/myinfo/myinfo.do', false)">자기소개</a></dd>
+						<!-- <dd><a href="javascript:;" onclick="clickMenu('myinfo2', '자기소개', '/myinfo/myinfo.do', false)">자기소개</a></dd> -->
 					</dl>
 					<dl style="width:13.666%;">
 						<dt><a href="javascript:;">팀프로젝트</a></dt>
@@ -348,7 +348,7 @@ function test() {
 					<dd class="gnb_submenu">
 						<ul>	
 							<li id="myinfo1_submenu" onclick="clickMenu('myinfo1', '프로필', '/myinfo/index.do', false)">프로필</li>
-							<li id="myinfo2_submenu" onclick="clickMenu('myinfo2', '자기소개', '/myinfo/myinfo.do', false)">자기소개</li>
+							<!-- <li id="myinfo2_submenu" onclick="clickMenu('myinfo2', '자기소개', '/myinfo/myinfo.do', false)">자기소개</li> -->
 						</ul>
 					</dd>
 					<dt id="project" class="gnb_menu">팀프로젝트<br/>
