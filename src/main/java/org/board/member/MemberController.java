@@ -82,4 +82,16 @@ public class MemberController {
 			return "common/alert";
 	}
 	
+	@PostMapping("/member/selfout.do")
+	public String selfout(MemberVO vo, Model model) {
+		if (service.selfout(vo) == 1) {
+			model.addAttribute("msg", "탈퇴...잘가요ㅜㅜ");
+			model.addAttribute("url", "/personal/index.do");
+			return "common/alert";
+		} else {
+			model.addAttribute("msg", "탈퇴 실패! 다시 생각해봐요!^^");
+			return "common/alert";
+		}
+	}
+	
 }
