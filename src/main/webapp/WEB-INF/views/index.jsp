@@ -324,7 +324,8 @@ function test() {
 					</dl>
 					<dl style="width:13.666%;">
 						<dt><a href="javascript:;">팀프로젝트</a></dt>
-						<dd><a href="javascript:;" onclick="clickMenu('project3', '프로젝트 기능', '/team.pdf', false)">프로젝트 기능</a></dd>
+						<dd><a href="javascript:;" onclick="clickMenu('project1', '스토리보드', '/story.pdf', false)">스토리보드</a></dd>
+						<dd><a href="javascript:;" onclick="clickMenu('project2', '프로젝트 기능', '/team.pdf', false)">프로젝트 기능</a></dd>
 						<dd><a href="http://3.39.57.179:8080/pet/main.do">프로젝트 보러가기</a></dd>
 					</dl>
 					<dl style="width:15.666%;">
@@ -356,8 +357,9 @@ function test() {
 					<dd class="gnb_submenu">
 						<p style="color:black; margin-bottom: 10px;">반려견과 다른 반려동물을 키우는 사람, 키우지 않는 사람들이 정보(병원, 여행지 등)를 얻고 소통하는 커뮤니티</p>	
 						<ul>
-							<li id="project3_submenu" onclick="clickMenu('project3', '프로젝트 기능', '/team.pdf', false)">프로젝트 기능</li>
-							<li id="project4_submenu" onclick="location.href='http://3.39.57.179:8080/pet/main.do'">프로젝트 보러가기</li>
+							<li id="project1_submenu" onclick="clickMenu('project1', '스토리보드', '/story.pdf', false)">스토리보드</li>
+							<li id="project2_submenu" onclick="clickMenu('project2', '프로젝트 기능', '/team.pdf', false)">프로젝트 기능</li>
+							<li id="project3_submenu" onclick="location.href='http://3.39.57.179:8080/pet/main.do'">프로젝트 보러가기</li>
 						</ul>
 					</dd>
 					<dt id="portfolio" class="gnb_menu">개인 프로젝트</dt>
@@ -372,6 +374,9 @@ function test() {
 			</div>
 			<div class="menuclose" onclick="menuToggle();"><img src="<%=util.Property.contextPath%>/img/menu_close.png" /></div>
 			<div class="copy">
+				<c:if test="${loginInfo != null && loginInfo.member_no != 1 }">
+				<a href="javascript:;">탈퇴하기</a> <br><br>
+				</c:if>
 				 Portfolio. 
 			</div>
 		</div>
