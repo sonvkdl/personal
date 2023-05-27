@@ -23,17 +23,14 @@
 				<tr>
 					<th>이름</th>
 					<td>손원주</td>
-					<th>나이</th>
+					<th>생년월일</th>
 					<td>
-						27세
+						1996.10.07
 					</td>
 				</tr>
 				<tr>
-					<th>연락처</th>
-					<td>
-					</td>
 					<th>이메일</th>
-					<td>
+					<td colspan="3">
 					sonvkdl@naver.com
 					</td>
 				</tr>
@@ -59,14 +56,19 @@
 					<td colspan="3">
 						00 회사 00 팀 (1년 6개월) - 00업무
 					</td>
-				</tr>
-				<tr>
-					<td colspan="3">
-						00 회사 00 팀 (1년 6개월) - 00업무
-					</td>
 				</tr> -->
 				<tr>
-					<th rowspan="2">자격증</th>
+					<td colspan="3">
+						비젠소프트 개발팀 (2022.12~) - 웹개발 및 솔루션
+					</td>
+				</tr>
+				<tr>
+					<th rowspan="3">자격증</th>
+					<td colspan="3">
+						SQLD
+					</td>
+				</tr>
+				<tr>
 					<td colspan="3">
 						정보처리기사 (필기)
 					</td>
